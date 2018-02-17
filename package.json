@@ -1,6 +1,6 @@
 {
   "name": "web2desktop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cli scaffolding tool to generate electron app using webview",
   "bin": {
     "web2desktop": "./bin/web2desktop.js"
