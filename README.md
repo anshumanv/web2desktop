@@ -1,4 +1,4 @@
-# web2app
+# web2app [![npm](https://img.shields.io/npm/v/web2desktop.svg)](https://www.npmjs.com/package/web2desktop) [![npm](https://img.shields.io/npm/dt/web2desktop.svg)](https://www.npmjs.com/package/web2desktop)
 
 >A cli tool which scaffolds out an electron app using webview
 
