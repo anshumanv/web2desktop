@@ -1,17 +1,16 @@
 {
-  "name": "web2app",
+  "name": "web2desktop",
   "version": "1.0.0",
   "description": "A cli scaffolding tool to generate electron app using webview",
-  "main": "app",
   "bin": {
-    "web2app": "./bin/web2app.js"
+    "web2desktop": "./bin/web2desktop.js"
   },
   "scripts": {
     "test": "xo"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anshumanv/web2app.git"
+    "url": "git+https://github.com/anshumanv/web2desktop.git"
   },
   "keywords": [
     "cli",
@@ -23,9 +22,9 @@
   "author": "anshumanv",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anshumanv/web2app/issues"
+    "url": "https://github.com/anshumanv/web2desktop/issues"
   },
-  "homepage": "https://github.com/anshumanv/web2app#readme",
+  "homepage": "https://github.com/anshumanv/web2desktop#readme",
   "dependencies": {
     "chalk": "^2.0.1",
     "commander": "^2.11.0",
