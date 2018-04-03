@@ -6,7 +6,8 @@
     "web2desktop": "./bin/web2desktop.js"
   },
   "scripts": {
-    "test": "xo"
+    "test": "xo",
+    "precommit": "npm test"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "conjecture": "^0.1.2",
     "cross-spawn": "^6.0.5",
     "egad": "^0.2.0",
+    "husky": "^0.14.3",
     "inquirer": "^3.2.1",
     "lodash.kebabcase": "^4.1.1",
     "stringify-author": "^0.1.3"
