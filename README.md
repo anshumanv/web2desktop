@@ -2,6 +2,11 @@
 
 >A cli tool which scaffolds out an electron app using webview
 
+## Demo
+<p align="center">
+	<img src="./demo.gif" alt="Demo">
+</p>
+
 ## Usage
 
 ##### Install the module globally
