@@ -4,10 +4,9 @@
 
 <h1 align="center"> web2desktop </h1>
 <p align="center">
-<img src="https://img.shields.io/npm/v/web2desktop.svg" align="center">
+<img src="https://img.shields.io/npm/v/web2desktop.svg?style=for-the-badge" align="center">
 
-<img src="https://img.shields.io/npm/dt/web2desktop.svg" align="center">
-<img src="https://img.shields.io/npm/v/web2desktop.svg" align="center">
+<img src="https://img.shields.io/npm/dt/web2desktop.svg?style=for-the-badge" align="center">
 </p>
 
 >A cli tool which scaffolds out an electron app using WebView
