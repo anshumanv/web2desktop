@@ -1,4 +1,4 @@
-<img src="https://image.flaticon.com/icons/svg/889/889073.svg" align="center" width="150">
+<p align="center"><img src="https://image.flaticon.com/icons/svg/889/889073.svg" align="center" width="150"></p>
 
 # web2desktop [![npm](https://img.shields.io/npm/v/web2desktop.svg)](https://www.npmjs.com/package/web2desktop) [![npm](https://img.shields.io/npm/dt/web2desktop.svg)](https://www.npmjs.com/package/web2desktop)
 
