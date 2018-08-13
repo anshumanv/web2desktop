@@ -1,10 +1,12 @@
+<img src="https://image.flaticon.com/icons/svg/889/889073.svg" align="center" width="150">
+
 # web2desktop [![npm](https://img.shields.io/npm/v/web2desktop.svg)](https://www.npmjs.com/package/web2desktop) [![npm](https://img.shields.io/npm/dt/web2desktop.svg)](https://www.npmjs.com/package/web2desktop)
 
->A cli tool which scaffolds out an electron app using webview
+>A cli tool which scaffolds out an electron app using WebView
 
 ## Demo
 <p align="center">
-	<img src="./demo.gif" alt="Demo">
+	<img src="./demo.gif" alt="Web2Desktop Demo">
 </p>
 
 ## Usage
@@ -26,11 +28,9 @@ Fill in the required fields and the app is generated! :tada:
 $ npm start
 ```
 
-
 ## Uses
 
 The handlebars template which is scaffolded out is [here](https://github.com/anshumanv/electron-webview-template)
-
 
 ## Author
 
@@ -46,4 +46,6 @@ Found a bug, please [create an issue](https://github.com/anshumanv/web2desktop/i
 ## License
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/anshumanv/web2desktop/blob/master/LICENSE)
-> © Anshuman Verma
+
+
+© [Anshuman Verma](https://github.com/anshumanv)
