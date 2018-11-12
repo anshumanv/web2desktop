@@ -5,7 +5,7 @@
 const path = require('path');
 const inquirer = require('inquirer');
 const program = require('commander');
-const {scaffold} = require('egad');
+const { scaffold } = require('egad');
 const kebabCase = require('lodash.kebabcase');
 const chalk = require('chalk');
 const spawn = require('cross-spawn');
@@ -17,7 +17,7 @@ const TEMPLATE_REPO_URL = 'https://github.com/anshumanv/electron-webview-templat
 program
 	.usage('[options] [destination]')
 	.option('-n, --appName <app-name>', 'App name')
-	.option('-d, --desc "<description>"',
+	.option('-d, --description "<description>"',
     'Description (contain in quotes)')
 	.option('-a, --author "<full-name>"',
     'Author name (contain in quotes)')
@@ -46,12 +46,12 @@ const prompts = [
 	},
 	{
 		type: 'input',
-		name: 'desc',
+		name: 'description',
 		default() {
 			return 'An electron app';
 		},
 		message: 'Description of app:',
-		when: !program.desc
+		when: !program.description
 	},
 	{
 		type: 'input',
@@ -60,7 +60,7 @@ const prompts = [
 			return 'https://anshumanv.co';
 		},
 		message: 'Link of the webview to be loaded',
-		when: !program.desc
+		when: !program.description
 	},
 	{
 		type: 'input',
