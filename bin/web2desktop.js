@@ -5,7 +5,7 @@
 const path = require('path');
 const inquirer = require('inquirer');
 const program = require('commander');
-const { scaffold } = require('egad');
+const {scaffold} = require('egad');
 const kebabCase = require('lodash.kebabcase');
 const chalk = require('chalk');
 const spawn = require('cross-spawn');
@@ -18,21 +18,21 @@ program
 	.usage('[options] [destination]')
 	.option('-n, --appName <app-name>', 'App name')
 	.option('-d, --description "<description>"',
-    'Description (contain in quotes)')
+		'Description (contain in quotes)')
 	.option('-a, --author "<full-name>"',
-    'Author name (contain in quotes)')
+		'Author name (contain in quotes)')
 	.option('-e, --email <email>', 'Author email address')
 	.option('-h, --homepage <homepage>', 'Author\'s homepage')
 	.option('-u, --user <username>', 'GitHub username or org (repo owner)')
 	.option('-r, --repo <repo-name>', 'Repository name')
 	.option('--overwrite', 'Overwrite existing files', false)
 	.option('--template <template-url>', 'URL of custom template',
-    TEMPLATE_REPO_URL)
+		TEMPLATE_REPO_URL)
 	.parse(process.argv);
 
-const destination = program.args.length ?
-  path.resolve(process.cwd(), program.args.shift()) :
-  process.cwd();
+const destination = program.args.length === 0 ?
+	process.cwd() :
+	path.resolve(process.cwd(), program.args.shift());
 
 const prompts = [
 	{
@@ -50,8 +50,7 @@ const prompts = [
 		default() {
 			return 'An electron app';
 		},
-		message: 'Description of app:',
-		when: !program.description
+		message: 'Description of app:'
 	},
 	{
 		type: 'input',
@@ -60,7 +59,7 @@ const prompts = [
 			return 'https://anshumanv.co';
 		},
 		message: 'Link of the webview to be loaded',
-		when: !program.description
+		when: !program.webview
 	},
 	{
 		type: 'input',
@@ -123,18 +122,18 @@ inquirer.prompt(prompts)
 	.then(results => {
 		results.forEach(fileinfo => {
 			console.log(`${fileinfo.skipped ? chalk.yellow('skipped existing file') :
-			chalk.green('created file')}: ${fileinfo.path}`);
+				chalk.green('created file')}: ${fileinfo.path}`);
 		});
 		return console.log(chalk.blue('Finished scaffolding files!'));
 	})
 	.then(() => {
-	console.log(chalk.blue('\nInstalling Node dependencies!'));
-	const child = spawn('npm', ['install', '--prefix', destination], {stdio: 'inherit'});
-	child.on('close', code => {
-		if (code !== 0) {
-			console.log(chalk.red(`Could not install npm dependencies. Try running ${chalk.bold('npm install')} yourself.`));
-			return;
-		}
-		console.log(chalk.blue('\nDone! Enjoy using your electron app!'));
-	});
+		console.log(chalk.blue('\nInstalling Node dependencies!'));
+		const child = spawn('npm', ['install', '--prefix', destination], {stdio: 'inherit'});
+		child.on('close', code => {
+			if (code !== 0) {
+				console.log(chalk.red(`Could not install npm dependencies. Try running ${chalk.bold('npm install')} yourself.`));
+				return;
+			}
+			console.log(chalk.blue('\nDone! Enjoy using your electron app!'));
+		});
 	});
