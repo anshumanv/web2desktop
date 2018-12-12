@@ -17,6 +17,7 @@ const TEMPLATE_REPO_URL = 'https://github.com/anshumanv/electron-webview-templat
 program
 	.usage('[options] [destination]')
 	.option('-n, --appName <app-name>', 'App name')
+	.option('-w, --webview <Page to render/ Webpage link>', 'Webpage link')
 	.option('-d, --description "<description>"',
 		'Description (contain in quotes)')
 	.option('-a, --author "<full-name>"',
@@ -56,7 +57,7 @@ const prompts = [
 		type: 'input',
 		name: 'webview',
 		default() {
-			return 'https://anshumanv.co';
+			return program.webview || 'Link of your app';
 		},
 		message: 'Link of the webview to be loaded',
 		when: !program.webview
